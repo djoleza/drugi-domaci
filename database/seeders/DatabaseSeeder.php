@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $KS = new KamionSeeder();
+        $VS = new VozacSeeder();
+
+        $VS->run();
+        $KS->run();
     }
 }
