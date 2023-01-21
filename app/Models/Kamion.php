@@ -11,6 +11,13 @@ class Kamion extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'reg_broj',
+        'kilometraza',
+        'marka',
+        'vozac_id',
+    ];
+
     public function vozac()
     {
         return $this->belongsTo(Vozac::class);
